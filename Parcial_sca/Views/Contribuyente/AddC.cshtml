@@ -1,0 +1,61 @@
+﻿@model Parcial_sca.Models.Contribuyente
+@{
+}
+
+<form asp-action="AddC">
+    <div class="CIva">
+        <label asp-for="CIva"> Seleccione condicion de IVA </label>
+        <select asp-for="CIva">
+            <option value="Seleccione una opcion"> Seleccione una opcion </option>
+            <option value="Monotributista"> Monotributista </option>
+            <option value="Responsable IVA instripto"> Responsable IVA instripto </option>
+            <option value="Excento"> Excento </option>
+        </select>
+    </div>
+    <br ><br />
+    <div class="Cuit">
+        <label asp-for="Cuit"></label>
+        <input asp-for="Cuit" />
+    </div>
+    <br ><br />
+    <div class="RZ">
+        <label asp-for="RZ"></label>
+        <input asp-for="RZ" />
+    </div>
+    <br ><br />
+    <div class="Domicilio">
+        <label asp-for="Domicilio"></label>
+        <input asp-for="Domicilio" />
+    </div>
+    <br ><br />
+    <div class="Email">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" type="email" />
+    </div>
+    <br ><br />
+
+    <div class="CVenta">
+        <label asp-for="CVenta"> Condicion de venta </label>
+        <br ><br />
+        <label asp-for="CVenta" class="control-label">Contado</label>
+        <input asp-for="CVenta" type="checkbox" value="Contado">
+        <br ><br />
+        <label asp-for="CVenta" class="control-label">Cheque</label>
+        <input asp-for="CVenta" type="checkbox" value="Cheque">
+        <br ><br />
+        <label asp-for="CVenta" class="control-label">Ticke</label>
+        <input asp-for="CVenta" type="checkbox" value="Ticket">
+        <br ><br />
+        <label asp-for="CVenta" class="control-label">Otros</label>
+
+        <input asp-for="CVenta" type="checkbox" value="Otros">
+    </div>
+    <br ><br />
+    <div class="submit-button">
+        <input type="submit" value="AddC" />
+    </div>
+</form>
+<br ><br />
+<hr />
+<br ><br />
+<a asp-action="Index"> Lista </a>

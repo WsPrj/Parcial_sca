@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Parcial_sca.Models.Contribuyente>
+@{
+
+}
+<p>
+    <a asp-action="AddC"><input type="submit" value="Agregar"/></a>
+</p>
+<table>
+    <thead>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.CIva)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Cuit)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.RZ)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Domicilio)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Email)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.CVenta)
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CIva)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cuit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RZ)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Domicilio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CVenta)
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
